@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./index.html">
+    <title>BOOK TRADE</title>
+</head>
+
+<body>
+    <h1>BOOK TRADE</h1>
+        <main class="livro" id="livro1">
+            <div class="livro">
+                <img class="imagem" src="./src/imagens/1003w-3sSIgiJNZo8.webp" alt="imagem1" id="primeiro">
+                <div class="conteudo">
+                    <h2 class="nome-livro">Tudo pelo meu pai</h2>
+                    <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
+                        totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
+                        quasi pariatur rerum voluptatem error.</p>
+                        <button class="afirmativo" onclick="mostrarMensagem('Tudo pelo meu pai')">Clique aqui se você tem o livro e deseja trocar</button>  
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Seção para exibir a mensagem e o botão "Chat" -->
+        <section id="mensagem-section" style="display: none;">
+            <h2 id="nomePessoa"></h2>
+            <div id="mensagem"></div>
+            <button id="chatButton" onclick="iniciarChat()">Chat</button>
+        </section>
+    
+        <script>
+            function mostrarMensagem(livro, nome) {
+                // Exibe a seção de mensagem
+                document.getElementById("mensagem-section").style.display = "block";
+    
+                // Adiciona o nome na seção de mensagem
+                document.getElementById("nomePessoa").innerText = "Olá, " + document.getElementById("nome") + "!";
+    
+                // Adiciona a mensagem na seção de mensagem
+                document.getElementById("mensagem").innerHTML = ('" nome "') + ", tenho esse livro ('" + livro + "') e desejo trocá-lo.";
+            }
+    
+            function iniciarChat() {
+                alert("Iniciando chat...");
+                var mensagem = prompt("Digite sua mensagem:");
+                // Adicione a lógica aqui para lidar com a mensagem do chat
+            }
+
+        </script>
+    </body>
+
+            
+
+
+
+
+           
+</html>

@@ -1,0 +1,88 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.livro {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #f1e9e9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.afirmativo {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.chat-box {
+    display: none;
+    margin-top: 10px;
+}
+
+.imagem {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.conteudo {
+    flex: 1;
+}
+
+.nome-livro {
+    color: #333;
+}
+
+.descrição {
+    color: #666;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    position: calc() ;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
