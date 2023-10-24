@@ -21,6 +21,8 @@
             <h2>Termos de Uso</h2>
             <p>Seja bem-vindo ao nosso aplicativo. Ao usar este serviço, você concorda com os termos de uso. ... (adicione os detalhes dos termos aqui).</p>
             <p>Lembre-se, ao fazer negociações pessoalmente, é recomendável que ocorram em espaços públicos ou na instituição.</p>
+            <button type="button" onclick="fecharModal(true)">aceito</button>
+            <button type="button" onclick="fecharModal(false)">não aceito</button>
         </div>
     </div>
 
@@ -28,7 +30,7 @@
         <h2>Informe seu nome:</h2>
         <form id="name-form">
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome"  value="nome1" name="nome" required>
             <button type="button" onclick="submitForm()">Continuar</button>
         </form>
     </section>
@@ -48,7 +50,7 @@
         </main>
         <main class="livro" id="livro2">
             <div class="livro">
-                <img class="imagem" src="./src/imagens/1003w-O7z4yw4a5k8.webp" alt="imagem1" id="primeiro">
+               <a href="pagina2.html"><img class="imagem" src="./src/imagens/1003w-O7z4yw4a5k8.webp" alt="imagem1" id="primeiro"></a>
                 <div class="conteudo">
                     <h2 class="nome-livro">Tudo pelo meu pai</h2>
                     <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
@@ -73,19 +75,25 @@
 
     <script>
         // Função para exibir o modal
-        function exibirModal() {
-            document.getElementById("termosModal").style.display = "flex";
-        }
+function exibirModal() {
+    document.getElementById("termosModal").style.display = "flex";
+}
 
-        // Função para fechar o modal
-        function fecharModal() {
-            document.getElementById("termosModal").style.display = "none";
-        }
+// Função para fechar o modal e processar a escolha do usuário
+function fecharModal(aceito) {
+    if (aceito) {
+        document.getElementById("termosModal").style.display = "none";
+    } else {
+        alert("Desculpe, você não poderá ter acesso a este site.");
+        exibirModal();
+    }
+}
 
-        // Exibe o modal ao carregar a página
-        window.onload = exibirModal;
+// Exibe o modal ao carregar a página
+window.onload = exibirModal;
 
-        // Restante do seu script...
+// Restante do seu script...
+
     </script>
 
     <script>
@@ -95,7 +103,7 @@
             // Verifica se o nome foi preenchido
             if (nome.trim() !== "") {
                 // Oculta o formulário e exibe a seção de livros
-                document.getElementById("form-section").style.display = "none";
+                document.getElementById("form-section").style.display = "none";  
                 document.getElementById("livros-section").style.display = "block";
 
                 // Adiciona o nome nas seções de livro
@@ -123,6 +131,7 @@
             alert(nome + ", você clicou em " + livro);
         }
     </script>
+      
+    <script src="chat.js"></script>
+    <script src="index.js"></script>
 </body>
-
-</html>
