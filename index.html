@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head> 
@@ -12,12 +12,6 @@
     <link rel="stylesheet" href="./pagina2.html">
     <title>BOOK TRADE</title>
     <script src="js/botão.js"></script>
-    <style>
-        .mensagem-erro {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
 </head>
 
 <body>
@@ -39,104 +33,107 @@
             <label for="nome">Nome:</label>
             <input type="text" id="nome"  name="nome" required><br>
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" required>
-            <p id="mensagemSenha" class="mensagem-erro"></p>
+            <input type="text" id="senha" required>
             <button type="button"  onclick="submitForm()">Continuar</button>
         </form>
     </section>
 
     <section id="livros-section" style="display: none;">
         <h2 id="nomePessoa"></h2>
-        <div class="livro">
-            <a href="pagina2.html"><img class="imagem" src="./src/imagens/1003w-3sSIgiJNZo8.webp" alt="imagem1" id="primeiro"></a>
-            <div class="conteudo">
-                <h2 class="nome-livro">Tudo pelo meu pai</h2>
-                <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
-                    totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
-                    quasi pariatur rerum voluptatem error.</p>
-                    
-            </div>
-    </main>
-    <main class="livro" id="livro2">
-        <div class="livro">
-           <a href="pagina2.html"><img class="imagem" src="./src/imagens/1003w-O7z4yw4a5k8.webp" alt="imagem1" id="primeiro"></a>
-            <div class="conteudo">
-                <h2 class="nome-livro">Tudo pelo meu pai</h2>
-                <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
-                    totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
-                    quasi pariatur rerum voluptatem error.</p>
-                    
-            </div>
-    </main>
-    <main class="livro" id="livro3">
-        <div class="livro">
-            <img class="imagem" src="./src/imagens/download (1).jpeg" alt="imagem1" id="primeiro">
-            <div class="conteudo">
-                <h2 class="nome-livro">Tudo pelo meu pai</h2>
-                <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
-                    totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
-                    quasi pariatur rerum voluptatem error.</p>
-                    
-            </div>
-    </main>
+        <main class="livro" id="livro1">
+            <div class="livro">
+                <a href="pagina2.html"><img class="imagem" src="./src/imagens/1003w-3sSIgiJNZo8.webp" alt="imagem1" id="primeiro"></a>
+                <div class="conteudo">
+                    <h2 class="nome-livro">Tudo pelo meu pai</h2>
+                    <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
+                        totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
+                        quasi pariatur rerum voluptatem error.</p>
+                        
+                </div>
+        </main>
+        <main class="livro" id="livro2">
+            <div class="livro">
+               <a href="pagina2.html"><img class="imagem" src="./src/imagens/1003w-O7z4yw4a5k8.webp" alt="imagem1" id="primeiro"></a>
+                <div class="conteudo">
+                    <h2 class="nome-livro">Tudo pelo meu pai</h2>
+                    <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
+                        totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
+                        quasi pariatur rerum voluptatem error.</p>
+                        
+                </div>
+        </main>
+        <main class="livro" id="livro3">
+            <div class="livro">
+                <img class="imagem" src="./src/imagens/download (1).jpeg" alt="imagem1" id="primeiro">
+                <div class="conteudo">
+                    <h2 class="nome-livro">Tudo pelo meu pai</h2>
+                    <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem iusto
+                        totam illum laborum nisi ab quod, optio rem reiciendis commodi distinctio nihil ipsum repudiandae
+                        quasi pariatur rerum voluptatem error.</p>
+                        
+                </div>
         </main>
     </section>
 
+
     <script>
-        function exibirModal() {
-            document.getElementById("termosModal").style.display = "flex";
-        }
+        // Função para exibir o modal
+function exibirModal() {
+    document.getElementById("termosModal").style.display = "flex";
+}
 
-        function fecharModal(aceito) {
-            if (aceito) {
-                document.getElementById("termosModal").style.display = "none";
-            } else {
-                alert("Desculpe, você não poderá ter acesso a este site.");
-                exibirModal();
-            }
-        }
+// Função para fechar o modal e processar a escolha do usuário
+function fecharModal(aceito) {
+    if (aceito) {
+        document.getElementById("termosModal").style.display = "none";
+    } else {
+        alert("Desculpe, você não poderá ter acesso a este site.");
+        exibirModal();
+    }
+}
 
-        window.onload = exibirModal;
+// Exibe o modal ao carregar a página
+window.onload = exibirModal;
 
+// Restante do seu script...
+
+    </script>
+
+    <script>
         function submitForm() {
             var nome = document.getElementById("nome").value;
-            var senha = document.getElementById("senha").value;
 
+            // Verifica se o nome foi preenchido
             if (nome.trim() !== "") {
-                // Aqui você deveria fazer uma requisição ao servidor para verificar a senha.
-                // Pode ser usando AJAX, Fetch API ou outra tecnologia apropriada para o seu caso.
-                // Se a senha for válida, continue com o restante do código.
-                // Se não, exiba uma mensagem de erro.
+                // Oculta o formulário e exibe a seção de livros
+                document.getElementById("form-section").style.display = "none";  
+                document.getElementById("livros-section").style.display = "block";
 
-                // Aqui, por simplicidade, estamos considerando uma senha estática "senha123".
-                // Na prática, você deve verificar isso no servidor.
-                if (senha === "senha123") {
-                    document.getElementById("form-section").style.display = "none";  
-                    document.getElementById("livros-section").style.display = "block";
-                    document.getElementById("nomePessoa").innerText = "Olá, " + nome + "!";
+                // Adiciona o nome nas seções de livro
+                document.getElementById("nomePessoa").innerText = "Olá, " + nome + "!";
 
-                    document.getElementById("livro1").addEventListener("click", function() {
-                        mostrarMensagem(nome, "Tudo pelo meu pai");
-                    });
+                // Adiciona a lógica JavaScript para cada bloco de livro
+                document.getElementById("livro1").addEventListener("click", function() {
+                    mostrarMensagem(nome, "Tudo pelo meu pai");
+                });
 
-                    document.getElementById("livro2").addEventListener("click", function() {
-                        mostrarMensagem(nome, "O segredo nas sombras");
-                    });
+                document.getElementById("livro2").addEventListener("click", function() {
+                    mostrarMensagem(nome, "O segredo nas sombras");
+                });
 
-                    document.getElementById("livro3").addEventListener("click", function() {
-                        mostrarMensagem(nome, "Vovô virou semente");
-                    });
-                } else {
-                    document.getElementById("mensagemSenha").innerText = "Senha incorreta. Você não pode entrar no site.";
-                }
+                document.getElementById("livro3").addEventListener("click", function() {
+                    mostrarMensagem(nome, "Vovô virou semente");
+                });
             } else {
                 alert("Por favor, preencha seu nome.");
             }
         }
 
         function mostrarMensagem(nome, livro) {
+            // Exemplo: Aqui você pode implementar a lógica para mostrar a mensagem ou fazer o que desejar
             alert(nome + ", você clicou em " + livro);
         }
     </script>
+      
+    
 </body>
-</html>
